@@ -2,7 +2,11 @@
   <div class="grid-wrap">
     <h1>Shopping Cart</h1>
     <div v-if="cartItems.length > 0">
-      <CartListItem v-for="item in cartItems" :key="item.id" :item="item" />
+      <CartListItem 
+        v-for="item in cartItems" 
+        v-on:remove-from-cart="$emit('remove-from-cart', $event)"
+        :key="item.id" :item="item" 
+      />
       <h3 id="total-price">Total: ${{ totalPrice }}</h3>
       <button id="checkout-button">Proceed to Checkout</button>
     </div>

@@ -5,7 +5,10 @@
       <h3>{{ item.name }}</h3>
       <p>${{ item.price }}</p>
     </div>
-    <button class="remove-button">Remove from Cart</button>
+    <button 
+      class="remove-button"
+      v-on:click="$emit('remove-from-cart', item.id)"
+    >Remove from Cart</button>
   </div>
 </template>
 
