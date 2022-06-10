@@ -28,7 +28,7 @@ export default {
   width: 100%;
 }
 
-.product-image {
+.item-image {
   flex: 1;
   height: 100px;
   max-width: 100px;
